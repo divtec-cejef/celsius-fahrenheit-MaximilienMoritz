@@ -6,10 +6,22 @@
  */
 
 (function main() {
-  'use strict'; // Demande un interprétation stricte du code
+    'use strict'; // Demande un interprétation stricte du code
 
-  let a = 'Bonjour';
+    const temperature = Number(prompt(`Température en Celsius : `));
 
-  console.log(a);
+    //Check si la veleur entrée est un nombre
+    if (isNaN(temperature)) {
+
+        //Envoie un message d'erreur à l'utilisateur
+        alert(`La valeur entrée n'es pas un nombre !`);
+
+    } else {
+
+        //Calcule et renvoie le résultat du calcul
+        let farhenheit = temperature * 9 / 5 + 32;
+        alert(` ${temperature}°C = ${farhenheit}°F `);
+    }
+
 }()); // Main IIFE
 
